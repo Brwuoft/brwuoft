@@ -1,0 +1,68 @@
+/* Navigation Pane */
+.nav-pane {
+    position: fixed;
+    height: 100vh;
+}
+/* End of Navigation Pane */
+
+/* Logo */
+#logo {
+    position: fixed;
+    top: 2%;
+    background: black;
+    color: white;
+    width: fit-content;
+    padding: 0px 30px;
+    transition: 0.2s;
+}
+
+#logo:hover {
+    background: white;
+    color: black;
+}
+
+/* End of Logo */
+
+#nav-list {
+    position: fixed;
+    top: 10%;
+}
+
+/* Navigation List */
+.list-group-item {
+    border: none;
+    color: grey;
+    transition: 0.3s;
+    padding: 0.5rem 1.5rem;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+}
+
+.list-group-item:last-child {
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+.list-group-item:hover {
+    padding: 0.5rem 0.75rem;
+    background: white;
+    border-left: 2px solid black;
+}
+
+/* End of Navigation List */
+
+/* Slide Title */
+
+.slide-title {
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 10px;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 20%;
+    transform: rotate(-90deg);
+}
