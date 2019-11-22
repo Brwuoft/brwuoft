@@ -1,0 +1,47 @@
+#slides-wrap {
+    min-height: 200vh;
+}
+
+.slide {
+    position: fixed;
+    height: 100vh;
+    transition: 0.5s;
+}
+
+/* styling for slide fading in */
+.fade-in {
+    transition-delay: 0.4s;
+    opacity: 100%;
+}
+
+/* styling for slide fading out */
+.fade-out {
+    opacity: 0%;
+    margin-top: -20%;
+}
+
+.content {
+    padding-top: 15%;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 20px;
+    height: 100vh;
+}
+
+.slide-header {
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.slide-text {
+    margin-top: 20px;
+    line-height: 200%;
+}
+#about-image {
+    margin-top: 20%;
+    height: 60%;
+    width: 90%;
+    background-image: url("../img/laser.jpg");
+    background-position: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}

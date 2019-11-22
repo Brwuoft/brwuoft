@@ -1,6 +1,5 @@
 /* Navigation Pane */
 .nav-pane {
-    position: fixed;
     height: 100vh;
 }
 /* End of Navigation Pane */
@@ -30,6 +29,7 @@
 
 /* Navigation List */
 .list-group-item {
+    background: white;
     border: none;
     color: grey;
     transition: 0.3s;

@@ -14,14 +14,22 @@
             crossorigin="anonymous"
         />
 
+        <!-- Google Font -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Custom CSS -->
         <link rel="stylesheet" href="./css/navpane.css" />
+        <link rel="stylesheet" href="./css/content-pane.css" />
     </head>
 
     <body>
         <div class="container-fluid">
             <div class="row">
                 <!-- Left Navigation Pane -->
-                <div class="col-md-3 nav-pane">
+                <div class="col-md-2 nav-pane">
                     <!-- Logo -->
                     <a href="./index.html">
                         <h1 id="logo">B. Wu</h1>
@@ -30,27 +38,33 @@
                     <!-- Navigation List -->
                     <div id="nav-list">
                         <ul class="list-group">
-                            <li
+                            <a
                                 class="list-group-item list-group-item-action round-0"
                                 href="#About"
                             >
                                 About
-                            </li>
-                            <li
+                            </a>
+                            <a
                                 class="list-group-item list-group-item-action round-0"
+                                href="#achievements"
                             >
                                 Achievements
-                            </li>
-                            <li
+                            </a>
+                            <a
                                 class="list-group-item list-group-item-action round-0"
                             >
                                 Research
-                            </li>
-                            <li
+                            </a>
+                            <a
                                 class="list-group-item list-group-item-action round-0"
                             >
                                 Photos
-                            </li>
+                            </a>
+                            <a
+                                class="list-group-item list-group-item-action round-0"
+                            >
+                                Contact
+                            </a>
                         </ul>
                     </div>
                     <!-- End of Navigation List-->
@@ -62,7 +76,79 @@
                 </div>
                 <!-- End of Navigation Bar -->
 
-                <div class="col-md-9"></div>
+                <div id="slides-wrap" class="col-md-10">
+                    <!-- About Slide -->
+                    <div id="about" class="slide">
+                        <div class="row">
+                            <div class="col-md-6 content">
+                                <!-- About slide header -->
+                                <h1 class="slide-header">
+                                    Hi,
+                                    <br />
+                                    I'm Bryce Wu.
+                                </h1>
+                                <!-- End of about slide header -->
+                                <!-- About slide content -->
+                                <p class="slide-text">
+                                    I'm a dental student at the National Taiwan
+                                    University, expecting to graduate in the
+                                    spring of 2026. Before studying dentistry, I
+                                    was previously a physics student at the
+                                    University of Toronto, with particular
+                                    interests in atomic physics and quantum
+                                    simulation.
+                                </p>
+                                <!-- End of about slide content -->
+                            </div>
+                            <div class="col-md-6">
+                                <div id="about-image"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of About Slide -->
+                    <!-- Achievement Slide -->
+                    <div id="achievements" class="slide fade-out">
+                        <div class="row">
+                            <div class="col-md-6 content">
+                                <!-- About slide header -->
+                                <h1 class="slide-header">
+                                    Hi,
+                                    <br />
+                                    I'm Bryce Wu.
+                                </h1>
+                                <!-- End of about slide header -->
+                                <!-- About slide content -->
+                                <p class="slide-text">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Vivamus feugiat ante
+                                    mauris, at convallis dui mattis ac. Ut
+                                    tempor dui mauris, ut finibus mauris
+                                    accumsan sed. Etiam fermentum, velit vitae
+                                    porta iaculis, nisl urna luctus tortor, eu
+                                    vestibulum mi massa non elit. Morbi tempus
+                                    eleifend sollicitudin. Nulla ac velit ex.
+                                    Fusce sodales purus nec commodo laoreet.
+                                    Nullam leo ex, congue sit amet suscipit at,
+                                    cursus eget urna. Sed eleifend nec nisi sit
+                                    amet porttitor. Fusce velit ante, vestibulum
+                                    eu nisi id, dignissim congue odio. Class
+                                    aptent taciti sociosqu ad litora torquent
+                                    per conubia nostra, per inceptos himenaeos.
+                                    Mauris sagittis massa ut interdum
+                                    pellentesque. Quisque egestas libero in
+                                    ligula lobortis, vitae convallis augue
+                                    tincidunt. Curabitur auctor fringilla ante
+                                    eget finibus.
+                                </p>
+                                <!-- End of achievement slide content -->
+                            </div>
+                            <div class="col-md-6">
+                                <div id="about-image"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Achievement Slide -->
+                </div>
             </div>
         </div>
 
@@ -82,5 +168,8 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"
         ></script>
+
+        <!-- Custom scripts for scrolling effects in the body -->
+        <script src="./js/scrolling.js"></script>
     </body>
 </html>
