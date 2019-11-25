@@ -16,13 +16,15 @@
 
         <!-- Google Font -->
         <link
-            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
+            href="https://fonts.googleapis.com/css?family=PT+Serif|Source+Sans+Pro&display=swap"
             rel="stylesheet"
         />
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="./css/navpane.css" />
+        <link rel="stylesheet" href="./css/slide-title.css" />
         <link rel="stylesheet" href="./css/content-pane.css" />
+        <link rel="stylesheet" href="./css/window-img.css" />
     </head>
 
     <body>
@@ -38,40 +40,33 @@
                     <!-- Navigation List -->
                     <div id="nav-list">
                         <ul class="list-group">
-                            <a
-                                class="list-group-item list-group-item-action round-0"
-                                href="#About"
+                            <li
+                                id="about-nav"
+                                class="list-group-item list-group-item-action list-group-item-active"
                             >
                                 About
-                            </a>
-                            <a
-                                class="list-group-item list-group-item-action round-0"
-                                href="#achievements"
-                            >
-                                Achievements
-                            </a>
-                            <a
-                                class="list-group-item list-group-item-action round-0"
-                            >
+                            </li>
+                            <li class="list-group-item list-group-item-action">
+                                Honors
+                            </li>
+                            <a class="list-group-item list-group-item-action">
                                 Research
                             </a>
-                            <a
-                                class="list-group-item list-group-item-action round-0"
-                            >
+                            <a class="list-group-item list-group-item-action">
                                 Photos
                             </a>
-                            <a
-                                class="list-group-item list-group-item-action round-0"
-                            >
+                            <a class="list-group-item list-group-item-action">
                                 Contact
                             </a>
                         </ul>
                     </div>
                     <!-- End of Navigation List-->
                     <!-- Slide Title -->
-                    <div class="slide-title">
-                        ABOUT
-                    </div>
+                    <div class="slide-title title-fade-in">ABOUT</div>
+                    <div class="slide-title title-fade-out">HONORS</div>
+                    <div class="slide-title title-fade-out">RESEARCH</div>
+                    <div class="slide-title title-fade-out">PHOTOS</div>
+                    <div class="slide-title title-fade-out">CONTACT</div>
                     <!-- End of Slide Title -->
                 </div>
                 <!-- End of Navigation Bar -->
@@ -79,10 +74,13 @@
                 <div id="slides-wrap" class="col-md-10">
                     <!-- About Slide -->
                     <div id="about" class="slide">
-                        <div class="row">
-                            <div class="col-md-6 content">
+                        <div class="row d-flex">
+                            <div class="col-md-6 py-5">
                                 <!-- About slide header -->
-                                <h1 class="slide-header">
+                                <h1
+                                    class="slide-header"
+                                    style="padding-top: 25%;"
+                                >
                                     Hi,
                                     <br />
                                     I'm Bryce Wu.
@@ -101,13 +99,44 @@
                                 <!-- End of about slide content -->
                             </div>
                             <div class="col-md-6">
-                                <div id="about-image"></div>
+                                <div class="row">
+                                    <div class="col-md-6 window-img">
+                                        <img
+                                            id="img-top-left"
+                                            src="./img/cn-tower.jpeg"
+                                            alt="cn-tower"
+                                        />
+                                    </div>
+                                    <div class="col-md-6 window-img">
+                                        <img
+                                            id="img-top-right"
+                                            src="./img/laser.jpg"
+                                            alt="laser"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 window-img">
+                                        <img
+                                            id="img-bottom-left"
+                                            src="./img/science-world.jpeg"
+                                            alt="vancouver"
+                                        />
+                                    </div>
+                                    <div class="col-md-6 window-img">
+                                        <img
+                                            id="img-bottom-right"
+                                            src="./img/pillars-of-creation.jpg"
+                                            alt="nebula"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- End of About Slide -->
-                    <!-- Achievement Slide -->
-                    <div id="achievements" class="slide fade-out">
+                    <!-- Honors Slide -->
+                    <div class="slide fade-out">
                         <div class="row">
                             <div class="col-md-6 content">
                                 <!-- About slide header -->
@@ -117,7 +146,7 @@
                                     I'm Bryce Wu.
                                 </h1>
                                 <!-- End of about slide header -->
-                                <!-- About slide content -->
+                                <!-- Honors slide content -->
                                 <p class="slide-text">
                                     Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit. Vivamus feugiat ante
@@ -140,14 +169,45 @@
                                     tincidunt. Curabitur auctor fringilla ante
                                     eget finibus.
                                 </p>
-                                <!-- End of achievement slide content -->
+                                <!-- End of honors slide content -->
                             </div>
-                            <div class="col-md-6">
-                                <div id="about-image"></div>
+                            <div class="col-md-6 fade-out-right">
+                                <div class="row">
+                                    <div class="col-md-6 window-img">
+                                        <img
+                                            id="img-top-left"
+                                            src="./img/cn-tower.jpeg"
+                                            alt="cn-tower"
+                                        />
+                                    </div>
+                                    <div class="col-md-6 window-img">
+                                        <img
+                                            id="img-top-right"
+                                            src="./img/laser.jpg"
+                                            alt="laser"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 window-img">
+                                        <img
+                                            id="img-bottom-left"
+                                            src="./img/science-world.jpeg"
+                                            alt="vancouver"
+                                        />
+                                    </div>
+                                    <div class="col-md-6 window-img">
+                                        <img
+                                            id="img-bottom-right"
+                                            src="./img/pillars-of-creation.jpg"
+                                            alt="nebula"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- End of Achievement Slide -->
+                    <!-- End of honors Slide -->
                 </div>
             </div>
         </div>
@@ -171,5 +231,6 @@
 
         <!-- Custom scripts for scrolling effects in the body -->
         <script src="./js/scrolling.js"></script>
+        <script src="./js/nav-list.js"></script>
     </body>
 </html>

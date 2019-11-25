@@ -1,6 +1,7 @@
 /* Navigation Pane */
 .nav-pane {
-    height: 100vh;
+    background: white;
+    height: 500vh;
 }
 /* End of Navigation Pane */
 
@@ -52,17 +53,10 @@
     border-left: 2px solid black;
 }
 
-/* End of Navigation List */
-
-/* Slide Title */
-
-.slide-title {
-    font-size: 50px;
-    font-weight: 600;
-    letter-spacing: 10px;
-    position: fixed;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 20%;
-    transform: rotate(-90deg);
+.list-group-item-active {
+    padding: 0.5rem 0.75rem;
+    background: white;
+    border-left: 2px solid black;
 }
+
+/* End of Navigation List */
