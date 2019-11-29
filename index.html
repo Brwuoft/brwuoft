@@ -6,6 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Document</title>
 
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
         <!-- Bootstrap CSS -->
         <link
             rel="stylesheet"
@@ -16,7 +19,7 @@
 
         <!-- Google Font -->
         <link
-            href="https://fonts.googleapis.com/css?family=PT+Serif|Source+Sans+Pro&display=swap"
+            href="https://fonts.googleapis.com/css?family=Karla|PT+Serif|Source+Sans+Pro&display=swap"
             rel="stylesheet"
         />
 
@@ -24,38 +27,108 @@
         <link rel="stylesheet" href="./css/navpane.css" />
         <link rel="stylesheet" href="./css/slide-title.css" />
         <link rel="stylesheet" href="./css/content-pane.css" />
-        <link rel="stylesheet" href="./css/window-img.css" />
+        <link rel="stylesheet" href="./css/typewriter.css" />
     </head>
 
     <body>
+        <div class="pos-f-t d-md-none fixed-top">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-beige p-4">
+                    <ul class="list-group">
+                        <a
+                            id="about-nav"
+                            class="list-group-item list-group-item-action list-group-item-active"
+                            href="#about"
+                        >
+                            About
+                        </a>
+                        <a
+                            class="list-group-item list-group-item-action"
+                            href="#honors"
+                        >
+                            Honors
+                        </a>
+                        <a
+                            class="list-group-item list-group-item-action"
+                            href="#research"
+                        >
+                            Research
+                        </a>
+                        <a
+                            class="list-group-item list-group-item-action"
+                            href="#skills"
+                        >
+                            Skills
+                        </a>
+                        <a
+                            class="list-group-item list-group-item-action"
+                            href="#contact"
+                        >
+                            Contact
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <nav
+                class="navbar navbar-light bg-beige d-flex justify-content-between fixed-top"
+            >
+                <a href="./index.html">
+                    <h2 id="logo-top-nav">B. Wu</h2>
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent"
+                    aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
         <div class="container-fluid">
             <div class="row">
                 <!-- Left Navigation Pane -->
-                <div class="col-md-2 nav-pane">
+                <div class="col-md-2 d-none d-md-block nav-pane">
                     <!-- Logo -->
                     <a href="./index.html">
-                        <h1 id="logo">B. Wu</h1>
+                        <h2 id="logo">B. Wu</h2>
                     </a>
                     <!-- End of Logo -->
                     <!-- Navigation List -->
                     <div id="nav-list">
                         <ul class="list-group">
-                            <li
+                            <a
                                 id="about-nav"
                                 class="list-group-item list-group-item-action list-group-item-active"
+                                href="#about"
                             >
                                 About
-                            </li>
-                            <li class="list-group-item list-group-item-action">
+                            </a>
+                            <a
+                                class="list-group-item list-group-item-action"
+                                href="#honors"
+                            >
                                 Honors
-                            </li>
-                            <a class="list-group-item list-group-item-action">
+                            </a>
+                            <a
+                                class="list-group-item list-group-item-action"
+                                href="#research"
+                            >
                                 Research
                             </a>
-                            <a class="list-group-item list-group-item-action">
-                                Photos
+                            <a
+                                class="list-group-item list-group-item-action"
+                                href="#skills"
+                            >
+                                Skills
                             </a>
-                            <a class="list-group-item list-group-item-action">
+                            <a
+                                class="list-group-item list-group-item-action"
+                                href="#contact"
+                            >
                                 Contact
                             </a>
                         </ul>
@@ -65,29 +138,36 @@
                     <div class="slide-title title-fade-in">ABOUT</div>
                     <div class="slide-title title-fade-out">HONORS</div>
                     <div class="slide-title title-fade-out">RESEARCH</div>
-                    <div class="slide-title title-fade-out">PHOTOS</div>
+                    <div class="slide-title title-fade-out">SKILLS</div>
                     <div class="slide-title title-fade-out">CONTACT</div>
                     <!-- End of Slide Title -->
                 </div>
                 <!-- End of Navigation Bar -->
 
-                <div id="slides-wrap" class="col-md-10">
+                <div id="content" class="col-md-10">
                     <!-- About Slide -->
-                    <div id="about" class="slide">
-                        <div class="row d-flex">
-                            <div class="col-md-6 py-5">
+                    <div id="about" class="min-vh-100 d-flex d-column">
+                        <div class="row slide-row">
+                            <div
+                                class="col-md-5 d-flex align-items-center justify-content-between"
+                            >
+                                <img
+                                    id="about-img"
+                                    src="./img/IMG_0974.JPG"
+                                    alt=""
+                                    class="rounded img-fluid hideme"
+                                />
+                            </div>
+                            <div id="about-text" class="col-md-7">
                                 <!-- About slide header -->
-                                <h1
-                                    class="slide-header"
-                                    style="padding-top: 25%;"
-                                >
+                                <h1 class="slide-header">
                                     Hi,
                                     <br />
-                                    I'm Bryce Wu.
+                                    <p class="anim-typewriter">I'm Bryce Wu</p>
                                 </h1>
                                 <!-- End of about slide header -->
                                 <!-- About slide content -->
-                                <p class="slide-text">
+                                <p>
                                     I'm a dental student at the National Taiwan
                                     University, expecting to graduate in the
                                     spring of 2026. Before studying dentistry, I
@@ -95,123 +175,324 @@
                                     University of Toronto, with particular
                                     interests in atomic physics and quantum
                                     simulation.
+                                    <br />
+                                    <br />
+                                    You can download my CV
+                                    <a href="./cv.pdf">here</a>.
                                 </p>
                                 <!-- End of about slide content -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="row">
-                                    <div class="col-md-6 window-img">
-                                        <img
-                                            id="img-top-left"
-                                            src="./img/cn-tower.jpeg"
-                                            alt="cn-tower"
-                                        />
-                                    </div>
-                                    <div class="col-md-6 window-img">
-                                        <img
-                                            id="img-top-right"
-                                            src="./img/laser.jpg"
-                                            alt="laser"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 window-img">
-                                        <img
-                                            id="img-bottom-left"
-                                            src="./img/science-world.jpeg"
-                                            alt="vancouver"
-                                        />
-                                    </div>
-                                    <div class="col-md-6 window-img">
-                                        <img
-                                            id="img-bottom-right"
-                                            src="./img/pillars-of-creation.jpg"
-                                            alt="nebula"
-                                        />
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- End of About Slide -->
                     <!-- Honors Slide -->
-                    <div class="slide fade-out">
-                        <div class="row">
-                            <div class="col-md-6 content">
-                                <!-- About slide header -->
-                                <h1 class="slide-header">
-                                    Hi,
-                                    <br />
-                                    I'm Bryce Wu.
-                                </h1>
-                                <!-- End of about slide header -->
+                    <div id="honors" class="min-vh-100 d-flex flex-column">
+                        <!-- About slide header -->
+                        <div>
+                            <h1 class="decorated title expand">
+                                <span>Honors</span>
+                            </h1>
+                        </div>
+                        <!-- End of about slide header -->
+                        <div
+                            class="row slide-row align-items-center flex-grow-1"
+                        >
+                            <div class="col-md-7">
                                 <!-- Honors slide content -->
-                                <p class="slide-text">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Vivamus feugiat ante
-                                    mauris, at convallis dui mattis ac. Ut
-                                    tempor dui mauris, ut finibus mauris
-                                    accumsan sed. Etiam fermentum, velit vitae
-                                    porta iaculis, nisl urna luctus tortor, eu
-                                    vestibulum mi massa non elit. Morbi tempus
-                                    eleifend sollicitudin. Nulla ac velit ex.
-                                    Fusce sodales purus nec commodo laoreet.
-                                    Nullam leo ex, congue sit amet suscipit at,
-                                    cursus eget urna. Sed eleifend nec nisi sit
-                                    amet porttitor. Fusce velit ante, vestibulum
-                                    eu nisi id, dignissim congue odio. Class
-                                    aptent taciti sociosqu ad litora torquent
-                                    per conubia nostra, per inceptos himenaeos.
-                                    Mauris sagittis massa ut interdum
-                                    pellentesque. Quisque egestas libero in
-                                    ligula lobortis, vitae convallis augue
-                                    tincidunt. Curabitur auctor fringilla ante
-                                    eget finibus.
-                                </p>
+                                <table class="table table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Award</th>
+                                            <th scope="col">Year</th>
+                                            <th scope="col">Location</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                James Loudon Gold Medal in
+                                                Physics
+                                            </td>
+                                            <td>2019</td>
+                                            <td>University of Toronto</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Bryan Wayne Statt-George Luste
+                                                Prize in Experimental Physics
+                                            </td>
+                                            <td>2018</td>
+                                            <td>University of Toronto</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Hymie and Roslyn Mida Student
+                                                Award in Theoretical Physics
+                                            </td>
+                                            <td>2018</td>
+                                            <td>University of Toronto</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                NSERC Undergraduate Student
+                                                Research Award
+                                            </td>
+                                            <td>2017, 2018</td>
+                                            <td>Canada</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                The Class of 3t0 and Associates
+                                                Scholarship in Mathematics and
+                                                Physics
+                                            </td>
+                                            <td>2017, 2018</td>
+                                            <td>University of Toronto</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                                 <!-- End of honors slide content -->
                             </div>
-                            <div class="col-md-6 fade-out-right">
-                                <div class="row">
-                                    <div class="col-md-6 window-img">
-                                        <img
-                                            id="img-top-left"
-                                            src="./img/cn-tower.jpeg"
-                                            alt="cn-tower"
-                                        />
-                                    </div>
-                                    <div class="col-md-6 window-img">
-                                        <img
-                                            id="img-top-right"
-                                            src="./img/laser.jpg"
-                                            alt="laser"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 window-img">
-                                        <img
-                                            id="img-bottom-left"
-                                            src="./img/science-world.jpeg"
-                                            alt="vancouver"
-                                        />
-                                    </div>
-                                    <div class="col-md-6 window-img">
-                                        <img
-                                            id="img-bottom-right"
-                                            src="./img/pillars-of-creation.jpg"
-                                            alt="nebula"
-                                        />
-                                    </div>
-                                </div>
+                            <div class="col-md-5 d-flex align-items-center">
+                                <img
+                                    id="honors-img"
+                                    src="./img/books.jpeg"
+                                    alt="books"
+                                    class="rounded img-fluid hideme"
+                                />
                             </div>
                         </div>
                     </div>
                     <!-- End of honors Slide -->
+                    <!-- Research Slide -->
+                    <div id="research" class="min-vh-100 d-flex flex-column">
+                        <!-- research slide header -->
+                        <div>
+                            <h1 class="decorated title expand">
+                                <span>Research</span>
+                            </h1>
+                        </div>
+                        <!-- End of research slide header -->
+                        <!-- Research slide content -->
+                        <div>
+                            <h3>
+                                <span class="dates">
+                                    2018.05 - 2018.08:
+                                </span>
+                                <b>Paramekanti Group</b>, University of Toronto
+                            </h3>
+                            <p>
+                                Worked on a study of magnetoelectric effects
+                                induced by spontaneous symmetry breaking in
+                                strongly correlated materials (<a
+                                    href="https://arxiv.org/abs/1904.04280"
+                                    >arXiv:1904.04280</a
+                                >).
+                            </p>
+                            <ul>
+                                <li>
+                                    Participated in the development of the
+                                    research question.
+                                </li>
+                                <li>
+                                    Developed code to calculate the kinetic
+                                    magnetoelectric response of a crystal.
+                                </li>
+                                <li>
+                                    Applied the code to a specific model
+                                    exhibiting the effect in question.
+                                </li>
+                                <li>
+                                    Interpreted the features of numerical
+                                    results using analytical calculations and
+                                    symmetry considerations.
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>
+                                <span class="dates">
+                                    2017.09 - 2019.04:
+                                </span>
+                                <b>Steinberg Lab</b>, University of Toronto
+                            </h3>
+                            <p>
+                                Worked in the Bose-Einstein Condensate group to
+                                build and test a 405nm interference-filter based
+                                external cavity diode laser (ECDL).
+                            </p>
+                            <ul>
+                                <li>
+                                    Showed that the ECDL can stably maintain
+                                    single-mode operation.
+                                </li>
+                                <li>
+                                    Characterized ECDL frequency and power
+                                    dependence on temperature, external cavity
+                                    length, and interference filter angle.
+                                </li>
+                                <li>
+                                    Modified the design to improve the tolerance
+                                    on the machined components.
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>
+                                <span class="dates">
+                                    2017.05 - 2017.08:
+                                </span>
+                                <b>Netterfield Lab</b>, University of Toronto
+                            </h3>
+                            Involved in preparing the baloon-borne telescope
+                            SuperBIT for a test flight at the Columbia
+                            Scientific Baloon Facility in Palestine, Texas. Also
+                            took part in the data analysis of teh SPIDER
+                            collaboration.
+                            <ul>
+                                <li>
+                                    Helped with assembling SuperBIT and testing
+                                    the optics at the launch facility
+                                </li>
+                                <li>
+                                    Built mock solar panels to test for effects
+                                    of added weight on SuperBIT's stability
+                                </li>
+                                <li>
+                                    Searched for an elusive noise pattern that
+                                    appeared in the SPIDER data by curve-fitting
+                                    and correlating the data with known examples
+                                    of the noise
+                                </li>
+                                <li>
+                                    Successfully identified almost 200 instances
+                                    of the noie that were previously missed
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End of research slide content -->
+                    </div>
+                    <!-- End of Research Slide -->
+                    <!-- skills Slide -->
+                    <div id="skills" class="min-vh-100 d-flex flex-column">
+                        <!-- skills slide header -->
+                        <div>
+                            <h1 class="decorated title expand">
+                                <span>Skills</span>
+                            </h1>
+                        </div>
+                        <!-- End of skills slide header -->
+                        <div
+                            class="row slide-row align-items-center flex-grow-1"
+                        >
+                            <div class="col-md-7">
+                                <!-- skills slide content -->
+                                <h3>
+                                    Programming Languages
+                                </h3>
+                                <ul>
+                                    <li>Python</li>
+                                    <li>C++</li>
+                                    <li>HTML / CSS</li>
+                                    <li>Javascript</li>
+                                </ul>
+                                <h3>
+                                    Teaching
+                                </h3>
+                                <ul>
+                                    <li>
+                                        Led 3 weekly tutorial sections for the
+                                        introductory calculus courses (MAT135 &
+                                        MAT136) at the University of Toronto by
+                                        reviewing lecture materials and guiding
+                                        students with applying problem solving
+                                        techniques.
+                                    </li>
+                                </ul>
+                                <!-- End of skills slide content -->
+                            </div>
+                            <div class="col-md-5">
+                                <img
+                                    id="skills-img"
+                                    src="./img/coding.jpeg"
+                                    alt="coding"
+                                    class="rounded img-fluid hideme"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of skills Slide -->
+                    <!-- Contact Slide -->
+                    <div id="contact" class="min-vh-100 d-flex flex-column">
+                        <div class="row flex-grow-1">
+                            <div class="col-md-6 d-flex align-items-center">
+                                <img
+                                    src="./img/mailboxes.jpeg"
+                                    id="img-mailboxes"
+                                    class="img-fluid rounded hideme"
+                                    alt=""
+                                />
+                            </div>
+                            <div id="contact-text" class="col-md-6">
+                                <h1 class="decorated title expand">
+                                    <span>
+                                        Contact
+                                    </span>
+                                </h1>
+                                <!-- Contact form -->
+                                <div class="container contact-container py-3">
+                                    <form
+                                        action="mailto:b06402014@ntu.edu.tw"
+                                        class="needs-validation py-3"
+                                    >
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="name"
+                                                placeholder="Name"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="email"
+                                                placeholder="Email"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="comments"
+                                                >Message</label
+                                            >
+                                            <textarea
+                                                class="form-control"
+                                                id="comments"
+                                                rows="5"
+                                                placeholder="Message"
+                                                required
+                                            ></textarea>
+                                        </div>
+                                        <button
+                                            text="submit"
+                                            class="btn btn-primary mt-2"
+                                        >
+                                            Submit
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Contact slide content -->
+                    </div>
+                    <!-- End of Contact Slide -->
                 </div>
             </div>
         </div>
-
         <!-- Bootstrap JS -->
         <script
             src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -230,7 +511,6 @@
         ></script>
 
         <!-- Custom scripts for scrolling effects in the body -->
-        <script src="./js/scrolling.js"></script>
-        <script src="./js/nav-list.js"></script>
+        <script src="./js/nav-scrolling.js"></script>
     </body>
 </html>
