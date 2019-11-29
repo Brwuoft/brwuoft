@@ -1,0 +1,26 @@
+/* Slide Title */
+
+.slide-title {
+    color: black;
+    font-family: "PT Serif", serif;
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 12px;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 5%;
+    left: 8%;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    transition: 0.3s;
+}
+
+.title-fade-in {
+    transition-delay: 0.4s;
+    opacity: 100%;
+}
+
+.title-fade-out {
+    opacity: 0%;
+}

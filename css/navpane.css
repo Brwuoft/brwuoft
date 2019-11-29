@@ -1,24 +1,27 @@
+a:hover {
+    text-decoration: none;
+}
+
 /* Navigation Pane */
 .nav-pane {
-    background: white;
-    height: 500vh;
+    background: rgb(234, 230, 223);
 }
 /* End of Navigation Pane */
 
 /* Logo */
 #logo {
     position: fixed;
+    font-weight: 700;
     top: 2%;
-    background: black;
-    color: white;
+    color: black;
     width: fit-content;
-    padding: 0px 30px;
+    padding: 0px 20px;
     transition: 0.2s;
 }
 
 #logo:hover {
-    background: white;
-    color: black;
+    background: black;
+    color: rgb(234, 230, 223);
 }
 
 /* End of Logo */
@@ -30,9 +33,12 @@
 
 /* Navigation List */
 .list-group-item {
-    background: white;
+    font-family: "Karla", sans-serif;
+    font-weight: 800 !important;
+    letter-spacing: 2px;
+    background: rgb(234, 230, 223);
     border: none;
-    color: grey;
+    color: black;
     transition: 0.3s;
     padding: 0.5rem 1.5rem;
 }
@@ -49,14 +55,38 @@
 
 .list-group-item:hover {
     padding: 0.5rem 0.75rem;
-    background: white;
-    border-left: 2px solid black;
+    background: rgb(234, 230, 223);
+    color: black;
+    border-left: 3px solid black;
 }
 
 .list-group-item-active {
     padding: 0.5rem 0.75rem;
-    background: white;
-    border-left: 2px solid black;
+    background: rgb(234, 230, 223);
+    border-left: 3px solid black;
 }
 
 /* End of Navigation List */
+
+/* Top Nav-bar */
+
+#navbarToggleExternalContent {
+    margin-top: 50px;
+}
+
+.bg-beige {
+    background: rgb(234, 230, 223);
+}
+
+#logo-top-nav {
+    top: 2%;
+    color: black;
+    width: fit-content;
+    padding: 0px 20px;
+    transition: 0.2s;
+}
+
+#logo-top-nav:hover {
+    background: black;
+    color: rgb(234, 230, 223);
+}

@@ -1,30 +1,7 @@
-#slides-wrap {
-    min-height: 200vh;
-}
-
-.slide {
-    position: fixed;
-    height: 100vh;
-    transition: 0.5s;
-}
-
-/* styling for slide fading in */
-.fade-in {
-    transition-delay: 0.4s;
-    opacity: 100%;
-}
-
-/* styling for slide fading out */
-.fade-out {
-    opacity: 0%;
-    margin-top: -20%;
-}
-
-.content {
-    padding-top: 15%;
+#content {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 20px;
-    height: 100vh;
+    padding: 0% 0%;
 }
 
 .slide-header {
@@ -32,16 +9,134 @@
     line-height: 150%;
 }
 
-.slide-text {
-    margin-top: 20px;
-    line-height: 200%;
+/* title with lines */
+.decorated {
+    overflow: hidden;
+    text-align: center;
 }
-#about-image {
-    margin-top: 20%;
-    height: 60%;
-    width: 90%;
-    background-image: url("../img/laser.jpg");
-    background-position: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
+.decorated > span {
+    position: relative;
+    display: inline-block;
+}
+.decorated > span:before,
+.decorated > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid;
+    width: 100px; /* half of limiter */
+    margin: 0 20px;
+}
+.decorated > span:before {
+    right: 100%;
+}
+.decorated > span:after {
+    left: 100%;
+}
+
+.title-div {
+    background: darkgrey;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.title {
+    color: rgb(124, 124, 124);
+    font-family: "PT Serif", serif;
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 8px;
+    padding: 0.5em 0;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s;
+}
+
+.slide-row {
+    padding: 0 3%;
+}
+
+.table {
+    font-size: 18px;
+}
+
+.hideme {
+    opacity: 0;
+    transition: 0.5s;
+    margin-top: -8%;
+}
+
+.appear {
+    opacity: 1;
+    margin-top: 0;
+}
+
+.expand {
+    letter-spacing: 16px;
+}
+
+/* About */
+#about {
+    background: rgb(248, 252, 255);
+}
+
+#about-text {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0% 5%;
+    line-height: 2em;
+}
+
+#about-img {
+    padding: 10% 5%;
+}
+
+li {
+    margin: 1em;
+}
+
+/* Honors */
+#honors {
+    background: #f8f8f6;
+}
+
+#honors-img {
+    padding: 0% 10%;
+}
+
+/* Research */
+#research {
+    background: #f6fafc;
+    padding: 0% 2%;
+}
+
+.dates {
+    color: grey;
+}
+
+#research > div > ul > li {
+    margin: 0.2em;
+    font-size: 18px;
+}
+
+/* Skills */
+#skills {
+    background: #fffff4;
+}
+
+/* Contact */
+#contact {
+    background: #f9f9ff;
+}
+
+#contact-text {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0% 5%;
+}
+
+#img-mailboxes {
+    position: relative;
+    padding: 15% 10%;
+    z-index: 1;
 }
