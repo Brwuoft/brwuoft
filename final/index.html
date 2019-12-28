@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Flashcards</title>
+
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Kalam&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Boostrap -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="./css/flashcards.css" />
+    </head>
+    <body class="d-flex flex-column justify-content-between">
+        <div class="container-fluid py-4">
+            <h1 id="main-header">Flashcards</h1>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="analytics-container" class="col-md-3">
+                    <div style="padding-top: 15px;">
+                        <h3>How to Use:</h3>
+                        <ol>
+                            <li>
+                                Click on each flash card to flip them.
+                            </li>
+                            <li>
+                                Add Cards by filling in the textboxes and remove
+                                cards by clicking on the 'X' on the top-right
+                                corner on the front of each card.
+                            </li>
+                            <li>
+                                Each card can be rated on a scale of easy,
+                                medium, and hard by flipping it to its back.
+                            </li>
+                            <li>
+                                Press the 'Test' button below to take a
+                                randomized test on the flashcards you have
+                                entered.
+                                <ul>
+                                    <li>
+                                        Cards that have not been rated will be
+                                        presented first.
+                                    </li>
+                                    <li>
+                                        There's a 50% probability that the card
+                                        presented will have a rating of 'Hard,'
+                                        a 30% probabiltiy that it will have a
+                                        rating of 'Medium,' and a 20%
+                                        probability that it will have a rating
+                                        of 'Easy.'
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary my-3" id="test-btn">
+                            Test
+                        </button>
+                    </div>
+                    <div id="analytics">
+                        <h3>Statistics</h3>
+                        <div id="donut-container">
+                            <canvas id="donut"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    id="fc-container"
+                    class="col-md-9 d-flex flex-wrap justify-content-center"
+                >
+                    <div class="scene mx-3 my-3">
+                        <div class="card">
+                            <div class="card-face card-front p-0">
+                                <span class="remove-btn pr-1">&#10006;</span>
+                                <div id="card-front-text" class="text-center">
+                                    Flash Card
+                                </div>
+                            </div>
+                            <div class="card-face card-back p-0">
+                                <div id="card-back-text">
+                                    (noun)
+                                    <br />
+                                    a card containing a small amount of
+                                    information, held up for pupils to see, as
+                                    an aid to learning.
+                                </div>
+                                <table
+                                    class="table mb-0 text-center"
+                                    style="height: 15%;"
+                                >
+                                    <tbody>
+                                        <tr>
+                                            <td
+                                                id="easy-btn"
+                                                class="fam-opt py-0 align-middle"
+                                            >
+                                                Easy
+                                            </td>
+                                            <td
+                                                id="medium-btn"
+                                                class="fam-opt py-0 align-middle"
+                                            >
+                                                Medium
+                                            </td>
+                                            <td
+                                                id="hard-btn"
+                                                class="fam-opt py-0 align-middle"
+                                            >
+                                                Hard
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form for adding a new flashcard -->
+                    <div id="add-card" class="px-2 py-2 mx-3 my-3 text-center">
+                        <!-- Field for front of flashcard -->
+                        <div class="input-group">
+                            <input
+                                id="flashcard-front-form"
+                                type="text"
+                                class="form-control mb-2 mt-1"
+                                placeholder="Front"
+                            />
+                        </div>
+                        <!-- Field for back of flashcard -->
+                        <div class="input-group">
+                            <textarea
+                                id="flashcard-back-form"
+                                rows="5"
+                                class="form-control mb-2"
+                                placeholder="Back"
+                            ></textarea>
+                        </div>
+                        <!-- Button to add flashcard to cookie list -->
+                        <button id="add-btn" type="button" class="btn btn-dark">
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fade-wrapper" class="container-fluids d-none">
+            <div class="test-scene">
+                <div class="test-card">
+                    <div class="card-face card-front p-0">
+                        <div id="test-front-text" class="text-center"></div>
+                    </div>
+                    <div class="card-face card-back p-0">
+                        <div id="test-back-text"></div>
+                        <table
+                            class="table mb-0 text-center"
+                            style="height: 15%;"
+                        >
+                            <tbody>
+                                <tr>
+                                    <td
+                                        id="easy-btn"
+                                        class="fam-opt py-0 align-middle"
+                                    >
+                                        Easy
+                                    </td>
+                                    <td
+                                        id="medium-btn"
+                                        class="fam-opt py-0 align-middle"
+                                    >
+                                        Medium
+                                    </td>
+                                    <td
+                                        id="hard-btn"
+                                        class="fam-opt py-0 align-middle"
+                                    >
+                                        Hard
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <button id="test-next-btn" class="btn btn-light">Next</button>
+                <button id="test-close-btn" class="btn btn-light">Close</button>
+            </div>
+        </div>
+
+        <div id="bottom-bar" class="container-fluid text-center">
+            <div class="mt-1">
+                © Bryce Wu
+            </div>
+        </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+        <script src="./js/test.js"></script>
+        <script src="./js/flashcard.js"></script>
+    </body>
+</html>

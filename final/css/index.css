@@ -1,0 +1,84 @@
+body {
+    min-height: 100vh;
+    background-color: rgb(235, 235, 235);
+}
+
+#main-header {
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+}
+
+#bottom-bar {
+    height: 100px;
+}
+
+#analytics-container {
+    background-color: grey;
+    color: white;
+    border-radius: 0px 15px 15px 0px;
+}
+
+#donut-container {
+    width: 90%;
+    padding-bottom: 30px;
+}
+
+#analytics {
+    position: sticky;
+    top: 30px;
+}
+
+#fade-wrapper {
+    position: fixed;
+    text-align: center;
+    padding-top: auto;
+    padding-bottom: auto;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.test-card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    background: none;
+    border: none;
+    transition: ease;
+    transition-duration: 0.5s;
+}
+
+.test-card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+#test-card-front {
+    font-family: "Libre Baskerville", serif;
+}
+
+.test-scene {
+    margin-left: 25%;
+    margin-top: 10%;
+    height: 60%;
+    width: 50%;
+}
+
+#test-back-text {
+    font-size: 24px;
+    overflow-y: auto;
+    padding: 5% 5%;
+    height: 85%;
+}
+
+#test-front-text {
+    font-size: 36px;
+    width: 100%;
+    overflow-y: auto;
+    margin-top: 30px;
+    padding: 0% 5% 5% 5%;
+}
