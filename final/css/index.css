@@ -10,24 +10,22 @@ body {
     text-align: center;
 }
 
-#bottom-bar {
-    height: 100px;
-}
-
 #analytics-container {
     background-color: grey;
     color: white;
     border-radius: 0px 15px 15px 0px;
+    position: sticky;
+    top: 30px;
+}
+
+#instructions {
+    max-height: 40vh;
+    overflow-y: auto;
 }
 
 #donut-container {
     width: 90%;
     padding-bottom: 30px;
-}
-
-#analytics {
-    position: sticky;
-    top: 30px;
 }
 
 #fade-wrapper {

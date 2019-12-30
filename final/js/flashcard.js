@@ -2,13 +2,6 @@
 // null = not yet rated, 1 = easy, 2 = medium, 3 = hard
 var familiarity = [null];
 
-var ncards = 1; // number of cards on display
-
-var newCard = () => {
-    $div = $();
-    $("#fc-container").append($div);
-};
-
 // Generate flashcard from an object key & value
 function generateCard(front, back) {
     if (front && back) {
@@ -100,6 +93,7 @@ var myDoughnutChart = new Chart(ctx, {
     type: "doughnut",
     data: data,
     options: {
+        aspectRatio: 1.3,
         responsive: true,
         legend: {
             labels: {
@@ -238,16 +232,16 @@ $(document).ready(function() {
         "div.test-scene>div.test-card>div.card-back>table>tbody>tr>td#easy-btn",
         function() {
             var cardIdx = null;
-            var j = 0;
+            var j = 0; // records number of easy cards the for loop below has gone through
             if (lastDiff == null) {
                 familiarity[testCardIdx] = 1;
                 cardIdx = testCardIdx;
             } else {
                 for (var i = 0; i < familiarity.length; i++) {
-                    if (familiarity[i] == difficulty) {
+                    if (familiarity[i] == lastDiff) {
                         j++;
                     }
-                    if (j == testCardIdx) {
+                    if (j == testCardIdx + 1) {
                         familiarity[i] = 1;
                         cardIdx = i;
                         break;
@@ -283,16 +277,16 @@ $(document).ready(function() {
         "div.test-scene>div.test-card>div.card-back>table>tbody>tr>td#medium-btn",
         function() {
             var cardIdx = null;
-            var j = 0;
+            var j = 0; // records number of medium cards the for loop below has gone through
             if (lastDiff == null) {
                 familiarity[testCardIdx] = 2;
                 cardIdx = testCardIdx;
             } else {
                 for (var i = 0; i < familiarity.length; i++) {
-                    if (familiarity[i] == difficulty) {
+                    if (familiarity[i] == lastDiff) {
                         j++;
                     }
-                    if (j == testCardIdx) {
+                    if (j == testCardIdx + 1) {
                         familiarity[i] = 2;
                         cardIdx = i;
                         break;
@@ -330,16 +324,16 @@ $(document).ready(function() {
         "div.test-scene>div.test-card>div.card-back>table>tbody>tr>td#hard-btn",
         function() {
             var cardIdx = null;
-            var j = 0;
+            var j = 0; // records number of hard cards the for loop below has gone through
             if (lastDiff == null) {
                 familiarity[testCardIdx] = 3;
                 cardIdx = testCardIdx;
             } else {
                 for (var i = 0; i < familiarity.length; i++) {
-                    if (familiarity[i] == difficulty) {
+                    if (familiarity[i] == lastDiff) {
                         j++;
                     }
-                    if (j == testCardIdx) {
+                    if (j == testCardIdx + 1) {
                         familiarity[i] = 3;
                         cardIdx = i;
                         break;

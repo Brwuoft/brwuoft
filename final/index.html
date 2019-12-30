@@ -28,58 +28,60 @@
         <link rel="stylesheet" href="./css/index.css" />
         <link rel="stylesheet" href="./css/flashcards.css" />
     </head>
-    <body class="d-flex flex-column justify-content-between">
+    <body class="d-flex flex-column">
         <div class="container-fluid py-4">
             <h1 id="main-header">Flashcards</h1>
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div id="analytics-container" class="col-md-3">
-                    <div style="padding-top: 15px;">
-                        <h3>How to Use:</h3>
-                        <ol>
-                            <li>
-                                Click on each flash card to flip them.
-                            </li>
-                            <li>
-                                Add Cards by filling in the textboxes and remove
-                                cards by clicking on the 'X' on the top-right
-                                corner on the front of each card.
-                            </li>
-                            <li>
-                                Each card can be rated on a scale of easy,
-                                medium, and hard by flipping it to its back.
-                            </li>
-                            <li>
-                                Press the 'Test' button below to take a
-                                randomized test on the flashcards you have
-                                entered.
-                                <ul>
-                                    <li>
-                                        Cards that have not been rated will be
-                                        presented first.
-                                    </li>
-                                    <li>
-                                        There's a 50% probability that the card
-                                        presented will have a rating of 'Hard,'
-                                        a 30% probabiltiy that it will have a
-                                        rating of 'Medium,' and a 20%
-                                        probability that it will have a rating
-                                        of 'Easy.'
-                                    </li>
-                                </ul>
-                            </li>
-                        </ol>
-                    </div>
-                    <div>
-                        <button class="btn btn-primary my-3" id="test-btn">
-                            Test
-                        </button>
-                    </div>
-                    <div id="analytics">
-                        <h3>Statistics</h3>
-                        <div id="donut-container">
-                            <canvas id="donut"></canvas>
+                <div class="col-md-3 px-0">
+                    <div id="analytics-container" class="px-3 pt-3">
+                        <div id="instructions">
+                            <h3>How to Use:</h3>
+                            <ol>
+                                <li>
+                                    Click on each flash card to flip them.
+                                </li>
+                                <li>
+                                    Add Cards by filling in the textboxes and
+                                    remove cards by clicking on the 'X' on the
+                                    top-right corner on the front of each card.
+                                </li>
+                                <li>
+                                    Each card can be rated on a scale of easy,
+                                    medium, and hard by flipping it to its back.
+                                </li>
+                                <li>
+                                    Press the 'Test' button below to take a
+                                    randomized test on the flashcards you have
+                                    entered.
+                                    <ul>
+                                        <li>
+                                            Cards that have not been rated will
+                                            be presented first.
+                                        </li>
+                                        <li>
+                                            There's a 50% probability that the
+                                            card presented will have a rating of
+                                            'Hard,' a 30% probabiltiy that it
+                                            will have a rating of 'Medium,' and
+                                            a 20% probability that it will have
+                                            a rating of 'Easy.'
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary my-3" id="test-btn">
+                                Test
+                            </button>
+                        </div>
+                        <div id="analytics">
+                            <h3>Statistics</h3>
+                            <div id="donut-container">
+                                <canvas id="donut"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -204,12 +206,6 @@
             <div class="mt-5">
                 <button id="test-next-btn" class="btn btn-light">Next</button>
                 <button id="test-close-btn" class="btn btn-light">Close</button>
-            </div>
-        </div>
-
-        <div id="bottom-bar" class="container-fluid text-center">
-            <div class="mt-1">
-                © Bryce Wu
             </div>
         </div>
 

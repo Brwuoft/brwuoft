@@ -20,6 +20,7 @@ function pickCard() {
     var backText = "";
 
     while (frontText == "") {
+        // first check if there is any unrated card
         if ($.inArray(null, familiarity) != -1) {
             console.log("Choosing unrated card");
             testCardIdx = $.inArray(null, familiarity);
@@ -67,7 +68,7 @@ function pickCard() {
                 $(".test-scene>div.test-card>div.card-back").addClass(
                     "easy-card"
                 );
-                lastDiff = difficulty;
+                lastDiff = 1;
                 lastCard = testCardIdx;
             } else if (difficulty <= 0.5) {
                 // pick a card with medium difficulty
@@ -90,7 +91,7 @@ function pickCard() {
                 $(".test-scene>div.test-card>div.card-back").addClass(
                     "medium-card"
                 );
-                lastDiff = difficulty;
+                lastDiff = 2;
                 lastCard = testCardIdx;
             } else {
                 // pick a card with hard difficulty
@@ -113,7 +114,7 @@ function pickCard() {
                 $(".test-scene>div.test-card>div.card-back").addClass(
                     "hard-card"
                 );
-                lastDiff = difficulty;
+                lastDiff = 3;
                 lastCard = testCardIdx;
             }
         }
