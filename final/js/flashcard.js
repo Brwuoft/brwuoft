@@ -238,6 +238,7 @@ $(document).ready(function() {
                 cardIdx = testCardIdx;
             } else {
                 for (var i = 0; i < familiarity.length; i++) {
+                    console.log("lastDiff: ", lastDiff, "j: ", j, "i: ", i)
                     if (familiarity[i] == lastDiff) {
                         j++;
                     }
@@ -283,6 +284,7 @@ $(document).ready(function() {
                 cardIdx = testCardIdx;
             } else {
                 for (var i = 0; i < familiarity.length; i++) {
+                    console.log("lastDiff: ", lastDiff, "j: ", j, "i: ", i)
                     if (familiarity[i] == lastDiff) {
                         j++;
                     }
@@ -330,6 +332,7 @@ $(document).ready(function() {
                 cardIdx = testCardIdx;
             } else {
                 for (var i = 0; i < familiarity.length; i++) {
+                    console.log("lastDiff: ", lastDiff, "j: ", j, "i: ", i)
                     if (familiarity[i] == lastDiff) {
                         j++;
                     }
